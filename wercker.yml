@@ -27,6 +27,8 @@ build:
 
 deploy:
     steps:
+        - install-packages:
+            packages: python-certifi
         - s3sync:
             key-id: $KEY
             key-secret: $SECRET
